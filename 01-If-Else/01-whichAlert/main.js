@@ -1,0 +1,1 @@
+//alert("Nooo") เพราะ 0 คือ false 

@@ -8,7 +8,7 @@ message =
     ? "C"
     : point >= 50 && point<= 59
     ? "D"
-    : point <50
+    : point >=0 && point < 50
     ? "F" 
-    : 'F';
+    : '';
 alert(message)

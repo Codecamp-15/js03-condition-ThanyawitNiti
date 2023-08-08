@@ -1,28 +1,42 @@
-// let a = prompt("number1"); //200
-// let b =prompt("number2"); //30
-// let c =prompt("number3"); //1
-// if (a>b && a>c && b>c ) {
-//     alert(a + ' ' + b + ' ' + c ) 
-// } else if (a>b && a>c && c>b) {
-//     alert(a + ' ' + c + ' ' + b ) 
-// }
-//  else if ((a<b && b>c  && a>c)) {
-//     alert(b + ' ' + a + ' ' + c ) 
-// }
-// else if ((b>a && b>c  && c>a)) {
-//      alert(b + ' ' + c + ' ' + a ) 
-// } 
-// else if ( c >a && c > b && b > a) {
-//     alert(c + ' ' + b + ' ' + a ) 
-// }else if ( c >a && c > b && a > b) {
-//     alert(c + ' ' + a + ' ' + b ) 
-// }
-// // a= 200 b =30 c = 1
+// - เขียนโปรแกรมสำหรับรับตัวเลขจากผู้ใช้งาน 3 ตัวเลข
+// - แสดงผลลัพธ์เป็นตัวเลขที่เรียงกันจากมากไปน้อย  
+//   เช่นรับค่าเป็น -1 ,4, 0 ให้แสดงผลเป็น 4, 0, -1
 
-let a =prompt("number1"); //200
-let b =prompt("number2"); //30
-let c =prompt("number3"); //1
+ let x = +prompt("number1"); 
+ let y = Number(prompt("number2"));
+ let z = prompt("number3")*1;
+ let max;
+ let mid;
+ let min;
+ if(x >= y && x >= z) {
+    max =x;
+    if ( y>= z) {
+        mid =y;
+        mid =z;
+    } else {
+        mid = z ;
+        min = y;
+    }
+ } else if (y >= x && y >= z) {
+    max=y;
+    if (x >= z){
+        mid = x;
+        min = z;
+    } else {
+        mid = z;
+        min = x
+    }
+ } else if (z >= x && z >= y) {
+    max=z;
+    if (x >= y ){
+        mid = x;
+        min = y;
+    } else {
+        mid = y;
+        min = x;
+    }
+ }
+ 
+ console.log(`${max} : ${mid} : ${min}`);
 
-let d = [a,b,c];
-d.sort();
-alert(d)
+ 
